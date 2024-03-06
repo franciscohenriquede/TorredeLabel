@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    .mesa{
+       position: relative;
+       display: grid;
+       grid-template-columns: 1fr 1fr 1fr;
+       height: 450px;
+       width: 600px;
+       background: aqua;
+      
+    }
+  .torre{
+    position: relative;
+}
+  .torre::after{
+    content: "";    
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 240px;
+    bottom: 0;
+    left: 90px;
+    background: blue;
+    border-radius: 10px 10px 0 0;
+    transition: all 1s;
+}
+   .disco{
+     position: absolute;
+     background:linear-gradient(0,red , rgba(255, 0, 0, 0.562));
+     height: 35px;
+     width: 180px;
+     border-radius: 15px;
+     z-index: 2px;
+     all :0.5s ease-in-out;
+    }
+   .d1{width: 60px ;  margin-left:70px ;}
+   .d2{width: 90px;  margin-left:55px ;}
+   .d3{width: 120px;  margin-left:40px ;}
+   .d4{width: 150px;  margin-left:25px ;}
+   .d5{width: 180px ;  margin-left: 10px;}
+   .d6{width: 210px ;  margin-left: 0px;}
+   .t1{left : 0 px;}
+   .t2{left : 200px;}
+   .t3{left : 400px;}
+   .p0{bottom :0;}
+   .p1{bottom: 35px;}
+   .p2{bottom: 70px;}
+   .p3{bottom: 105px;}
+   .p4{bottom: 140px;}
+   .p5{bottom:175px}
+  
+  
+  
+   </style> 
+</head>
+<body>
+    <div class="mesa">
+     <div  class="disco d1 t1 p5" id ="disco-1" value ="disco-1"></div>  
+     <div class="disco d2 t1 p4"id ="disco-2" value ="disco-2"></div> 
+     <div class="disco d3 t1 p3"id ="disco-3" value ="disco-3"></div> 
+     <div class="disco d4 t1 p2"id ="disco-4" value ="disco-4"></div> 
+     <div class="disco d5 t1 p1"id ="disco-5" value ="disco-5"></div> 
+     <div class="disco d6 t1 p0"id ="disco-6" value ="disco-6"></div> 
+        <div class ="torre"></div>
+        <div class ="torre"></div>
+        <div class ="torre"></div>
+          
+         </div>
+ 
+               <button onclick="reiniciarJogo()">Reiniciar Jogo</button>
+               
+               <button onclick="iniciarSimulacao()">Iniciar simulacao</button>
+
+
+        </body>
+        <script src ="scritp.js"></script>
+
+        </html>
